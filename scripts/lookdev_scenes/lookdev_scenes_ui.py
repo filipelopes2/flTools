@@ -11,7 +11,7 @@ from startup.ui_functions import UiFunctions
 __tool_name__ = 'LookDev Scenes'
 __tool_class__ = 'OpenLookDevScenes'
 __tool_function__ = 'open_ui'
-__tool_submenu__ = 'Look & Render'
+__tool_submenu__ = 'Look and Render'
 
 
 class LookDevUI(QWidget):

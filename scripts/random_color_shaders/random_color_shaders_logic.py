@@ -8,7 +8,7 @@ from startup.ui_functions import UiFunctions
 __tool_name__ = 'Random Color Shaders'
 __tool_class__ = 'RandomShadersLogic'
 __tool_function__ = 'set_random_shaders'
-__tool_submenu__ = 'Look & Render'
+__tool_submenu__ = 'Look and Render'
 
 
 class RandomShadersLogic:
