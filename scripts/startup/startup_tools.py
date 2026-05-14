@@ -25,13 +25,13 @@ class StartupTools:
         path = os.path.dirname(os.path.abspath(__file__ + '/../'))
 
         for root, dirs, filenames in os.walk(path):
-            for dir in dirs:
-                if dir in ignore_dirs:
+            for directory in dirs:
+                if directory in ignore_dirs:
                     continue
                 else:
-                    module_path = os.path.join(root, dir, f'{dir}_ui.py')
+                    module_path = os.path.join(root, directory, f'{directory}_ui.py')
                     if not os.path.isfile(module_path):
-                        module_path = os.path.join(root, dir, f'{dir}_logic.py')
+                        module_path = os.path.join(root, directory, f'{directory}_logic.py')
                     self._import_module(module_path)
 
     def _import_module(self, module_path=None) -> None:
@@ -56,16 +56,35 @@ class StartupTools:
         self._delete_menus()
 
         # creating submenus
-        submenus_list = list(dict.fromkeys([self.tools[tool]['submenu'] for tool in self.tools]))
+        submenus_list = []
+        for tool in self.tools:
+            if isinstance(self.tools[tool]['submenu'], str):
+                submenus_list.append(self.tools[tool]['submenu'])
+            if isinstance(self.tools[tool]['submenu'], dict):
+                submenus_list.append(list(self.tools[tool]['submenu'].keys())[0])
+
+        submenus_list = list(set(submenus_list))
+        submenus_list.sort()
         submenus_dict = {}
         for submenu in submenus_list:
             if submenu != '_':
                 submenus_dict[submenu] = cmds.menuItem(parent=self.menu_name, tearOff=True, label=submenu, subMenu=True)
 
         for tool in self.tools:
-            parent_menu = {self.menu_name} if self.tools[tool]['submenu'] == '_' else self.tools[tool]['submenu']
-            cmds.menuItem(parent=submenus_dict[parent_menu], label=self.tools[tool]['name'],
-                          command=eval(f'self.tools[tool]["module"].{tool}.{self.tools[tool]["function_name"]}'))
+            if self.tools[tool]['submenu'] == '_':
+                parent_menu = self.menu_name
+            elif isinstance(self.tools[tool]['submenu'], dict):
+                parent_menu = list(self.tools[tool]['submenu'].keys())[0]
+            else:
+                parent_menu = self.tools[tool]['submenu']
+
+            if not isinstance(self.tools[tool]['submenu'], dict):
+                cmds.menuItem(parent=submenus_dict[parent_menu], label=self.tools[tool]['name'],
+                              command=eval(f'self.tools[tool]["module"].{tool}.{self.tools[tool]["function_name"]}'))
+            else:
+                for item in self.tools[tool]['submenu'][parent_menu]:
+                    cmds.menuItem(parent=submenus_dict[parent_menu], label=item,
+                                  command=eval(f'self.tools[tool]["module"].{tool}().{self.tools[tool]["submenu"][parent_menu][item]}'))
 
         cmds.menuItem(parent=self.menu_name, divider=True)
         cmds.menuItem(parent=self.menu_name, label='About', command=self._about_clicked)
@@ -93,7 +112,6 @@ class StartupTools:
 
         # text
         text_label = QTextEdit()
-        # Set text using Markdown syntax
         markdown_content = ('# flTools\n'
                             '---\n'
                             'version 0.1 - 2026/05\n\n'
