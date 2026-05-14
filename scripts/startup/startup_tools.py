@@ -6,6 +6,7 @@ from functools import partial
 from PySide6.QtWidgets import *
 
 from startup.ui_functions import UiFunctions
+from pprint import pp
 
 
 class StartupTools:
