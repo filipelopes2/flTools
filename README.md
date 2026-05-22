@@ -24,37 +24,37 @@ These scripts are not dependant or related, and each one has its own `README` fi
 
 ## Available tools
 
-- [Archive Scenes](scripts/archive_scenes/README.MD) - creates a zip file with all resources for each Maya scene selected
+- [Archive Scenes](https://github.com/filipelopes2/flTools/tree/main/scripts/archive_scenes) - creates a zip file with all resources for each Maya scene selected
 
 
-- [Camera Keyframer](scripts/camera_keyframer/README.MD) - creates keyframes on the selected camera, and it's respective aim ( if it exists )
+- [Camera Keyframer](https://github.com/filipelopes2/flTools/tree/main/scripts/camera_keyframer) - creates keyframes on the selected camera, and it's respective aim ( if it exists )
 
 
-- [Collapse UVs](scripts/collapse_uvs/README.MD) - copies UVs from different UV Sets to a `map1` UV Set and deletes the other UV Sets
+- [Collapse UVs](https://github.com/filipelopes2/flTools/tree/main/scripts/collapse_uvs) - copies UVs from different UV Sets to a `map1` UV Set and deletes the other UV Sets
 
 
-- [Duplicate Camera](scripts/duplicate_camera/README.MD) - creates a new camera with the same parameters of a selected camera, but baked
+- [Duplicate Camera](https://github.com/filipelopes2/flTools/tree/main/scripts/duplicate_camera) - creates a new camera with the same parameters of a selected camera, but baked
 
 
-- [Fix Normals](scripts/fix_normals/README.MD) - fix face normals of a polygon mesh
+- [Fix Normals](https://github.com/filipelopes2/flTools/tree/main/scripts/fix_normals) - fix face normals of a polygon mesh
 
 
-- [Lookdev Scenes](scripts/lookdev_scenes/README.MD) - imports a scene to help create lookdevs
+- [Lookdev Scenes](https://github.com/filipelopes2/flTools/tree/main/scripts/lookdev_scenes) - imports a scene to help create lookdevs
 
 
-- [Move All Maker](scripts/move_all_maker/README.MD) - creates three controls parented to a joint and connects them to the selected objects
+- [Move All Maker](https://github.com/filipelopes2/flTools/tree/main/scripts/move_all_maker) - creates three controls parented to a joint and connects them to the selected objects
 
 
-- [Random Color Shaders](scripts/random_color_shaders/README.MD) - creates an aiStandardSurface shader with a random color for each selected object
+- [Random Color Shaders](https://github.com/filipelopes2/flTools/tree/main/scripts/random_color_shaders) - creates an aiStandardSurface shader with a random color for each selected object
 
 
-- [USD Tools](scripts/usd_tools/README.MD) - not actually a collection of tools, but some tests of features of the technology
+- [USD Tools](https://github.com/filipelopes2/flTools/tree/main/scripts/usd_tools) - not actually a collection of tools, but some tests of features of the technology
 
 
-- [Yeti Tools](scripts/yeti_tools/README.MD) - functions to help create initial graph nodes for hair and fur creation
+- [Yeti Tools](https://github.com/filipelopes2/flTools/tree/main/scripts/yeti_tools) - functions to help create initial graph nodes for hair and fur creation
 
 
-- [Zip Render](scripts/zip_render/README.MD) - compacts renders into a zip file with the project's directory structure
+- [Zip Render](https://github.com/filipelopes2/flTools/tree/main/scripts/zip_render) - compacts renders into a zip file with the project's directory structure
 
 ## How to install
 
@@ -64,7 +64,7 @@ These scripts are not dependant or related, and each one has its own `README` fi
 - edit the file `flTools.mod` with the path for the flTools folder. e.g:
 
 ```
-+ flTools any D:/Maya_Scripts/flTools
++ flTools any D:/Maya_https://github.com/filipelopes2/flTools/tree/main/scripts/flTools
 ```
 
 - copy `flTools.mod` into Maya's modules folder ( e.g. `C:\Program Files\Autodesk\Maya2026\modules` )
