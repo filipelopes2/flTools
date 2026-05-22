@@ -20,12 +20,12 @@ The object must have a UV Set named `map1`.
 <tr style="vertical-align: top; text-align: center;">
     <td>
         <a href="_images\collapse_uvs-howto_1.png" target="_blank">
-        <img src="_images\collapse_uvs-howto_1.png"  width="100%" height="100%">
+        <img src="_images\collapse_uvs-howto_1.png"  width="100%">
         </a>
     </td>
     <td>
         <a href="_images\collapse_uvs-howto_2.png" target="_blank">
-        <img src="_images\collapse_uvs-howto_2.png"  width="100%" height="100%">
+        <img src="_images\collapse_uvs-howto_2.png"  width="100%">
         </a>
     </td>
 </tr>

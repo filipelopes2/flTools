@@ -12,7 +12,6 @@ Very useful when a camera was animated with a rig, and it has to be exported to 
 
 - Select the camera to be duplicated and run the tool
 
-<br>
-<div style="text-align: center;">
-<img src="_images\duplicate_camera-howto_1.png"  width="75%" height="75%">
-</div>
+<p align="center">
+<img src="_images\duplicate_camera-howto_1.png"  width="450">
+</p>

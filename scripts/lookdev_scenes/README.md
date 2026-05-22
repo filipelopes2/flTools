@@ -23,19 +23,18 @@ e.g. If a scene has a texture from the `C:/` folder, it might not be imported us
 
 2. click on the thumbnail to import the scene
 
-<br>
-<div style="text-align: center;">
-<img src="_images\lookdev_scenes-howto_1.png"  width="75%" height="75%">
-</div>
+<p align="center">
+<img src="_images\lookdev_scenes-howto_1.png"  width="450">
+</p>
 
->   **Note:** the script will import the scene, copy the scene files and adjust its nodes to use the files from the new location
+> [!NOTE]
+> The script will import the scene, copy the scene files and adjust its nodes to use the files from the new location
 
-<br>
-<div style="text-align: center;">
+<p align="center">
 <a href="_images\lookdev_scenes-howto_2.jpg" target="_blank">
-<img src="_images\lookdev_scenes-howto_2.jpg"  width="75%" height="75%">
+<img src="_images\lookdev_scenes-howto_2.jpg"  width="450">
 </a>
-</div>
+</p>
 
 
 # How to add new scenes
@@ -56,12 +55,12 @@ example:
 └─📁[...]
    └─📁resources
       └─📁scenes
-         └─📄day_time_arnold_001.ma
-         └─🖼️day_time_arnold_001-thumb.png
-         └─📄lookdev_base_arnold_001.ma
-         └─🖼️lookdev_base_arnold_001-thumb.png
-         └─📄studio_arnold_001.ma
-         └─🖼️studio_base_arnold_001-thumb.png
-         └─[...]
+         ├─📄day_time_arnold_001.ma
+         ├─🖼️day_time_arnold_001-thumb.png
+         ├─📄lookdev_base_arnold_001.ma
+         ├─🖼️lookdev_base_arnold_001-thumb.png
+         ├─📄studio_arnold_001.ma
+         ├─🖼️studio_base_arnold_001-thumb.png
+         ├─[...]
 </pre>
 

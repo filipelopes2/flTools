@@ -6,12 +6,16 @@ Some functions to help create initial graph nodes for hair and fur creation.
 
 ## Known issues
 
-Nodes will be stacked after created. To solve that, open the Graph Editor and go to `Edit > Auto-Layout` 
+Nodes will be stacked after created. 
 
-<div style="text-align: center;">
+> [!IMPORTANT]
+> To solve that, open the Graph Editor and go to `Edit > Auto-Layout`
+
+<p align="center">
 <img src="_images\yeti_tools-howto_1.png"  width="250"><br>
 <img src="_images\yeti_tools-howto_2.png"  width="600">
-</div>
+</p>
+
 
 ## How to use it
 
@@ -25,9 +29,9 @@ Nodes will be stacked after created. To solve that, open the Graph Editor and go
     - a `yeti` node
     - initial nodes on the graph
 
-<div style="text-align: center;">
+<p align="center">
 <img src="_images\yeti_tools-howto_3.png"  width="600">
-</div>
+</p>
 
 
 ### Initial Graph - With Groom
@@ -41,6 +45,6 @@ Nodes will be stacked after created. To solve that, open the Graph Editor and go
     - a `groom` node
     - initial nodes on the graph
 
-<div style="text-align: center;">
+<p align="center">
 <img src="_images\yeti_tools-howto_4.png" width="600">
-</div>
+</p>
