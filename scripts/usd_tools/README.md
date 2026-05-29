@@ -4,7 +4,13 @@
 
 For now, it is not actually a collection of tools, but some tests of features of the technology.
 
-## Export Assets
+___
+
+<details>
+
+<summary><h2 style="display:inline-block">Export Assets - BETA</h2></summary>
+
+## Export Assets - BETA
 
 Create an USD asset with its variants from a single Maya scene. A main USD file references the variants from other USD files.
 
@@ -108,3 +114,93 @@ would create
 
 
 - export the USD file
+
+</details>
+
+<br>
+
+<details>
+
+<summary><h2 style="display:inline-block">Export Assets - Maya 2027</h2></summary>
+
+## Export Assets - Maya 2027
+
+Create an USD asset with its variants from a single Maya scene. A main USD file references the variants from other USD files.
+
+The USD file is saved on a selected folder with additional USD files.
+
+This method uses the Maya 2027 `Create Component` tool as base to save the USD files.
+
+## Known issues
+
+- the `USD Variant Manager` screen will open empty at the end of the process, but it is because I'm using the `Create Component` tool
+
+
+- some shader nodes might not export correctly
+
+## How to
+
+Select the asset root group and run the tool.
+
+The interface is really simple and the only thing to select is the base folder, where the files will be created.
+
+<p align="center">
+<img src="_images\ui_maya_2027.png"  width="50%" height="50%">
+</p>
+
+## How it works
+
+The script relies on the node hierarchy on the outliner to create the USD structure and variant files.
+
+The hierarchy is the following:
+
+<pre>
+└─🔲[ASSET_NAME]
+   └─🔲[VARIANT_SET]
+      └─🔲[variant_name]
+         ├─🔘[mesh1]
+         ├─🔘[mesh2]
+         ├─🔘[mesh3]
+         ├─🔘[...]
+</pre>
+
+> **[ASSET_NAME]** - the name of the asset. It is used as the folder name where all data for the asset will be located and 
+also the name of the main USD file. No USD prim is created on this level.
+
+> **[VARIANT_SET]** - the name of the variant set that will be created on the USD file.
+
+> **[variant_name]** - the name of the variant. All geometries under it will be included on the variant.
+
+The script will use all this information to create one USD file for each variant and another USD file to reference the 
+variants.
+
+Variants are exported with the assigned material converted to MaterialX.
+
+Final file structure is the following:
+
+<pre>
+└─📁[base_folder]
+   └─📁[ASSET_NAME]
+      ├─📁bind
+      |  └─📄bind.usda
+      ├─📁geo
+      |  ├─📄geo.usda
+      |  ├─📄[VARIANT_SET]_[variant_name].usdc
+      |  └─📄...
+      ├─📁mtl
+      |  ├─📄mtl.usda
+      |  ├─📄[VARIANT_SET]_[variant_name].usdc
+      |  └─📄...
+      ├─📄[ASSET_NAME].usda
+      └─📄payload.usda
+</pre>
+
+## Result
+
+A comparison of an asset as geometries inside Maya ( left ), and as USD file ( middle ) and its variants ( right ): 
+
+<p align="center">
+<img src="_images\outliner_maya_2027.png"  width="50%" height="50%">
+</p>
+
+</details>
