@@ -6,6 +6,7 @@ The tool compacts renders into a zip file with the project's directory structure
 
 To work properly, download 7-Zip from the [download page](https://www.7-zip.org/download.html) and install it on the default location.
 
+> [!NOTE]
 > 7-Zip is a free, open-source file archiver and compression utility for Windows, designed to create, manage, and extract compressed files
 
 ## Use cases

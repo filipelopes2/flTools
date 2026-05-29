@@ -25,7 +25,6 @@ A window might open asking about unsaved changes. Just cancel it. I still can't 
 
 4. Click the `archive` button
 
-<br>
-<div style="text-align: center;">
-<img src="_images\archive_scenes-howto_1.png"  width="75%" height="75%">
-</div>
+<p align="center">
+<img src="_images\archive_scenes-howto_1.png"  width="400">
+</p>

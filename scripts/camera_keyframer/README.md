@@ -24,7 +24,7 @@ If the camera has an aim, it must the named `[camera name]_aim` ( e.g. camera1_a
 
 3. Use `focal length curve` to change the curve on focal length to "stepnext"
 
-<br>
-<div style="text-align: center;">
-<img src="_images\camera_keyframer-howto_1.png"  width="75%" height="75%">
-</div>
+
+<p align="center">
+<img src="_images\camera_keyframer-howto_1.png"  width="450">
+</p>

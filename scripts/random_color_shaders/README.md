@@ -15,7 +15,6 @@ The names of the created materials and shading groups are based on the object's 
 
 - select the objects and run the tool
 
-<br>
-<div style="text-align: center;">
-<img src="_images\random_color_shaders-howto_1.png"  width="50%" height="50%">
-</div>
+<p align="center">
+<img src="_images\random_color_shaders-howto_1.png"  width="350">
+</p>
